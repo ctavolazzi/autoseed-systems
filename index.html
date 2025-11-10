@@ -6,12 +6,12 @@
   <title>Autoseed Systems</title>
   <style>
     :root {
-      color-scheme: light dark;
-      --earth: #433422;
-      --sage: #b6c4a2;
-      --cream: #f4f0e8;
+      --cream: #f7f2e7;
+      --sand: #f0e6d6;
+      --terracotta: #c04a1c;
+      --teal: #1a8c7b;
       --charcoal: #1f1f1f;
-      --card-bg: rgba(255, 255, 255, 0.85);
+      --warm-gray: #4f3b27;
     }
 
     * {
@@ -26,7 +26,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #10150f 0%, #2b3a29 35%, #b7c3a4 100%);
+      background: linear-gradient(180deg, #fffaf3 0%, var(--cream) 60%, var(--sand) 100%);
       color: var(--charcoal);
       padding: 3rem 1rem 4rem;
     }
@@ -38,23 +38,42 @@
     }
 
     .card {
-      background: var(--card-bg);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.92);
       border-radius: 18px;
       padding: 2rem;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.2);
-      border: 1px solid rgba(67, 52, 34, 0.08);
+      box-shadow: 0 18px 45px rgba(31, 31, 31, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      border-left: 6px solid transparent;
+    }
+
+    .card[data-card="1"],
+    .card[data-card="4"],
+    .card[data-card="7"] {
+      border-left-color: var(--terracotta);
+    }
+
+    .card[data-card="2"],
+    .card[data-card="5"],
+    .card[data-card="8"] {
+      border-left-color: var(--teal);
+    }
+
+    .card[data-card="3"],
+    .card[data-card="6"] {
+      border-left-color: var(--warm-gray);
     }
 
     header.card {
       text-align: center;
-      background: rgba(255,255,255,0.95);
+      border-left-color: var(--terracotta);
+      background: #fffdfa;
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      color: var(--earth);
+      font-size: clamp(2.15rem, 4vw, 3.7rem);
+      color: var(--terracotta);
       margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
     }
 
     h2 {
@@ -63,15 +82,16 @@
       color: var(--charcoal);
     }
 
-    h3 {
-      font-size: 1.25rem;
-      letter-spacing: 0.15em;
+    .card-label {
+      font-size: 0.8rem;
       text-transform: uppercase;
-      margin-bottom: 0.25rem;
-      color: rgba(31, 31, 31, 0.75);
+      letter-spacing: 0.2em;
+      color: rgba(79, 59, 39, 0.75);
+      margin-bottom: 0.75rem;
     }
 
-    p, li {
+    p,
+    li {
       line-height: 1.6;
       color: rgba(31, 31, 31, 0.85);
     }
@@ -79,12 +99,40 @@
     ul {
       list-style: none;
       padding-left: 0;
+      display: grid;
+      gap: 0.35rem;
     }
 
-    li::before {
-      content: "✦";
-      color: var(--earth);
-      margin-right: 0.75rem;
+    ul li::before {
+      content: "▸";
+      color: currentColor;
+      margin-right: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    ul ul {
+      padding-left: 1.5rem;
+      gap: 0.2rem;
+    }
+
+    ul ul li::before {
+      content: "–";
+      color: rgba(79, 59, 39, 0.7);
+      margin-right: 0.35rem;
+    }
+
+    li strong {
+      color: var(--warm-gray);
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(26, 140, 123, 0.3);
+    }
+
+    a:hover {
+      border-bottom-color: rgba(26, 140, 123, 0.8);
     }
 
     .footnote {
@@ -106,13 +154,13 @@
 </head>
 <body>
   <main>
-    <header class="card">
+    <header class="card" data-card="title">
       <h1>Autoseed Systems</h1>
       <p><em>A new generation of simple, beautiful, and fully autonomous gardens.</em></p>
     </header>
 
-    <section class="card">
-      <h3>Card 1</h3>
+    <section class="card" data-card="1">
+      <p class="card-label">Card 1 &middot; The Problem</p>
       <h2>Gardening is hard.</h2>
       <ul>
         <li>It's time-consuming.</li>
@@ -122,8 +170,8 @@
       </ul>
     </section>
 
-    <section class="card">
-      <h3>Card 2</h3>
+    <section class="card" data-card="2">
+      <p class="card-label">Card 2 &middot; Our Solution</p>
       <h2>A garden that grows itself.</h2>
       <ul>
         <li><strong>Autoseed Systems</strong> is building fully autonomous, "set it and forget it" gardening systems.</li>
@@ -132,8 +180,8 @@
       </ul>
     </section>
 
-    <section class="card">
-      <h3>Card 3</h3>
+    <section class="card" data-card="3">
+      <p class="card-label">Card 3 &middot; Our Mission</p>
       <h2>Grow your own food. With zero effort.</h2>
       <ul>
         <li>Our goal is to make it possible for anyone to grow their own fresh, healthy food.</li>
@@ -142,8 +190,8 @@
       </ul>
     </section>
 
-    <section class="card">
-      <h3>Card 4</h3>
+    <section class="card" data-card="4">
+      <p class="card-label">Card 4 &middot; The Technology</p>
       <h2>Open, Smart, &amp; Simple</h2>
       <ul>
         <li><strong>Open-Source:</strong> All our designs and code will be available for free.</li>
@@ -153,18 +201,24 @@
       </ul>
     </section>
 
-    <section class="card">
-      <h3>Card 5</h3>
+    <section class="card" data-card="5">
+      <p class="card-label">Card 5 &middot; The Journey</p>
       <h2>The "Johnny Autoseed" Project</h2>
       <ul>
-        <li>"Johnny Autoseed" is the YouTube channel documenting this entire project.</li>
+        <li>"Johnny Autoseed" is the YouTube channel documenting the entire project.</li>
         <li>This isn't just a faceless company; it's a real-world maker journey.</li>
-        <li>The channel will share everything: design, tutorials, build logs, files, and time-lapses of plants growing themselves.</li>
+        <li>The channel shares:
+          <ul>
+            <li>Design and prototyping sessions</li>
+            <li>Step-by-step tutorials and build logs</li>
+            <li>3D printing files and living time-lapses</li>
+          </ul>
+        </li>
       </ul>
     </section>
 
-    <section class="card">
-      <h3>Card 6</h3>
+    <section class="card" data-card="6">
+      <p class="card-label">Card 6 &middot; Design Philosophy</p>
       <h2>Technology that feels natural.</h2>
       <ul>
         <li>We are blending high-tech automation with an organic, minimalist design.</li>
@@ -174,8 +228,8 @@
       </ul>
     </section>
 
-    <section class="card">
-      <h3>Card 7</h3>
+    <section class="card" data-card="7">
+      <p class="card-label">Card 7 &middot; The Vision</p>
       <h2>Beyond the planter.</h2>
       <ul>
         <li>Our work is the first step toward a future of local, automated food production.</li>
@@ -184,8 +238,8 @@
       </ul>
     </section>
 
-    <section class="card">
-      <h3>Card 8</h3>
+    <section class="card" data-card="8">
+      <p class="card-label">Card 8 &middot; Get Involved</p>
       <h2>Join the mission.</h2>
       <ul>
         <li>This is an open project, and you are invited to be a part of it.</li>
