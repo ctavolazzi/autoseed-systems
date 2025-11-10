@@ -1,1 +1,200 @@
-<h1>Welcome to Autoseed Systems</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autoseed Systems</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --earth: #433422;
+      --sage: #b6c4a2;
+      --cream: #f4f0e8;
+      --charcoal: #1f1f1f;
+      --card-bg: rgba(255, 255, 255, 0.85);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #10150f 0%, #2b3a29 35%, #b7c3a4 100%);
+      color: var(--charcoal);
+      padding: 3rem 1rem 4rem;
+    }
+
+    main {
+      width: min(960px, 100%);
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+      border: 1px solid rgba(67, 52, 34, 0.08);
+    }
+
+    header.card {
+      text-align: center;
+      background: rgba(255,255,255,0.95);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--earth);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      margin-bottom: 0.85rem;
+      color: var(--charcoal);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+      color: rgba(31, 31, 31, 0.75);
+    }
+
+    p, li {
+      line-height: 1.6;
+      color: rgba(31, 31, 31, 0.85);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li::before {
+      content: "✦";
+      color: var(--earth);
+      margin-right: 0.75rem;
+    }
+
+    .footnote {
+      font-style: italic;
+      color: rgba(31, 31, 31, 0.7);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 2rem 1rem 3rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="card">
+      <h1>Autoseed Systems</h1>
+      <p><em>A new generation of simple, beautiful, and fully autonomous gardens.</em></p>
+    </header>
+
+    <section class="card">
+      <h3>Card 1</h3>
+      <h2>Gardening is hard.</h2>
+      <ul>
+        <li>It's time-consuming.</li>
+        <li>It requires constant knowledge and effort.</li>
+        <li>Watering, weeding, and pests are a daily battle.</li>
+        <li><strong>Result:</strong> Many people who want to grow their own food, don't.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Card 2</h3>
+      <h2>A garden that grows itself.</h2>
+      <ul>
+        <li><strong>Autoseed Systems</strong> is building fully autonomous, "set it and forget it" gardening systems.</li>
+        <li>We're designing for everyone: from the apartment balcony to the backyard.</li>
+        <li>Our systems handle the watering, the light, and the nutrients automatically.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Card 3</h3>
+      <h2>Grow your own food. With zero effort.</h2>
+      <ul>
+        <li>Our goal is to make it possible for anyone to grow their own fresh, healthy food.</li>
+        <li>We believe in simplicity, beauty, and open-source technology.</li>
+        <li>This is about food independence, sustainability, and quality of life.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Card 4</h3>
+      <h2>Open, Smart, &amp; Simple</h2>
+      <ul>
+        <li><strong>Open-Source:</strong> All our designs and code will be available for free.</li>
+        <li><strong>3D-Printable:</strong> Built with accessible parts that you can make and modify yourself.</li>
+        <li><strong>Smart Systems:</strong> Using modern sensors and automation to give plants exactly what they need.</li>
+        <li><em>Inspired by the open-source FarmBot project.</em></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Card 5</h3>
+      <h2>The "Johnny Autoseed" Project</h2>
+      <ul>
+        <li>"Johnny Autoseed" is the YouTube channel documenting this entire project.</li>
+        <li>This isn't just a faceless company; it's a real-world maker journey.</li>
+        <li>The channel will share everything: design, tutorials, build logs, files, and time-lapses of plants growing themselves.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Card 6</h3>
+      <h2>Technology that feels natural.</h2>
+      <ul>
+        <li>We are blending high-tech automation with an organic, minimalist design.</li>
+        <li>Our systems are designed to be beautiful, not just functional.</li>
+        <li>We use an earthy color palette and natural-feeling materials.</li>
+        <li><em>Technology should feel like a part of your home, not an intrusion.</em></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Card 7</h3>
+      <h2>Beyond the planter.</h2>
+      <ul>
+        <li>Our work is the first step toward a future of local, automated food production.</li>
+        <li>Imagine backyard robotics and autonomous systems tending to neighborhood gardens.</li>
+        <li>This is about building resilient communities and a more sustainable food future.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>Card 8</h3>
+      <h2>Join the mission.</h2>
+      <ul>
+        <li>This is an open project, and you are invited to be a part of it.</li>
+        <li><strong>Follow the Story:</strong> Subscribe to "Johnny Autoseed" on YouTube.</li>
+        <li><strong>See the Code:</strong> Explore the <code>autoseed-systems</code> repository on GitHub.</li>
+        <li><strong>Watch Our Progress:</strong> Visit <a href="https://johnnyautoseed.com" target="_blank" rel="noreferrer">johnnyautoseed.com</a>.</li>
+      </ul>
+      <p class="footnote">Built with love for the open-source growing community.</p>
+    </section>
+  </main>
+</body>
+</html>
